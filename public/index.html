@@ -15,7 +15,11 @@
 <body>
     <div class="text-center">
        <h1 class="text-2xl font-bold my-5">Simple Request Example</h1> 
-       <button hx-get="/users" hx-swap="outerHTML" class="bg-blue-500 text-white py-2 md:py-3 px-4 md:px-6 xl:px-8 my-5 rounded-lg hover:bg-white hover:text-blue-500 hover:border hover:border-blue-500 duration-300">Fetch Users</button>
+       <button hx-get="/users" hx-target="#users" hx-indicator="#loading" class="bg-blue-500 text-white py-2 md:py-3 px-4 md:px-6 xl:px-8 my-5 rounded-lg hover:bg-white hover:text-blue-500 hover:border hover:border-blue-500 duration-300">Fetch Users</button>
+       <span class="htmx-indicator" id="loading">
+         <img src="img/loading.jpg" alt="Loading" class="m-auto h-20">
+       </span>
+       <div id="users" class="mt-4"></div>
     </div>
 </body>
 </html> 
