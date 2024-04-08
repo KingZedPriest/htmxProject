@@ -6,13 +6,11 @@
     <title>First HTMX Project</title>
     <!-- Tailwind CSS file -->
     <link rel="stylesheet" href="./css/output.css">
-    <!-- Include htmx library -->
-    <script src="/scripts/htmx.org/dist/htmx.js"></script>
 </head>
 <body>
     <div class="text-center">
        <h1 class="text-2xl font-bold my-5">Simple Request Example</h1> 
-       <button hx-get="https://jsonplaceholder.typicode.com/users" hx-trigger="click" class="bg-blue-500 text-white py-2 md:py-3 px-4 md:px-6 xl:px-8 my-5 rounded-lg hover:bg-white hover:text-blue-500 hover:border hover:border-blue-500 duration-300">Fetch Users</button>
+       <button hx-get="/users" hx-swap="outerHTML" class="bg-blue-500 text-white py-2 md:py-3 px-4 md:px-6 xl:px-8 my-5 rounded-lg hover:bg-white hover:text-blue-500 hover:border hover:border-blue-500 duration-300">Fetch Users</button>
     </div>
 </body>
-</html>
+</html> 
